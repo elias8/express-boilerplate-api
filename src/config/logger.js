@@ -8,25 +8,25 @@ const env = process.env.NODE_ENV;
 const morganFormat = ':date[iso] - /:method :url HTTP/:http-version :status :response-time ms - :res[content-length]';
 
 const logger = winston.createLogger({
-    transports: [
-        new (winston.transports.Console)({
-            timestamp: moment(),
-            level: 'silly',
-            colorize: true
-        })
-    ]
+	transports: [
+		new (winston.transports.Console)({
+			timestamp: moment(),
+			level: 'silly',
+			colorize: true
+		})
+	]
 });
 
 function Log(app) {
-    if (env !== 'test') {
-        app.use(morgan(morganFormat));
-    }
+	if (env !== 'test') {
+		app.use(morgan(morganFormat));
+	}
 }
 
 Log.show = (level, message) => {
-    if (env !== 'test') {
-        logger.log(level, message);
-    }
+	if (env !== 'test') {
+		logger.log(level, message);
+	}
 };
 
 Log.e = message => Log.show('error', message);
