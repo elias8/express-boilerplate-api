@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./index.js",
-    "test": "mocha",
     "coverage": "nyc npm run test"
   },
   "nyc": {
