@@ -6,6 +6,11 @@
     "start": "nodemon ./index.js",
     "coverage": "nyc npm run test"
   },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "all": true,
+    "check-coverage": true
+  },
   "dependencies": {
     "bluebird": "^3.5.5",
     "body-parser": "latest",
