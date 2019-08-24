@@ -2,7 +2,7 @@
 
 const logger = require('./logger');
 const mongoose = require('mongoose');
-const {mongo, env} = require('./env');
+const {mongo, env} = require('./variables');
 const mongooseHidden = require('mongoose-hidden');
 
 mongoose.Promise = Promise;
