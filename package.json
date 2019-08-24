@@ -4,12 +4,16 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./index.js",
+    "test": "mocha",
     "coverage": "nyc npm run test"
   },
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",
     "all": true,
-    "check-coverage": true
+    "check-coverage": true,
+    "include": [
+      "src/**/*.js"
+    ]
   },
   "dependencies": {
     "bluebird": "^3.5.5",
