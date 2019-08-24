@@ -32,15 +32,15 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-#  deploy:
-#    docker:
-#    - image: buildpack-deps:trusty
-#    steps:
-#    - checkout
-#    - run:
-#        name: Deploy Master to Heroku
-#        command: |
-#          git push https://heroku:c3bbf87e-e63e-4279-844c-357975b30403@git.heroku.com/adc-api.git master
+  #  deploy:
+  #    docker:
+  #    - image: buildpack-deps:trusty
+  #    steps:
+  #    - checkout
+  #    - run:
+  #        name: Deploy Master to Heroku
+  #        command: |
+  #          git push https://heroku:c3bbf87e-e63e-4279-844c-357975b30403@git.heroku.com/adc-api.git master
 
 workflows:
   version: 2
